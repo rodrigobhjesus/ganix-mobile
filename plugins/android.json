@@ -1,0 +1,33 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-console": {
+            "PACKAGE_NAME": "br.com.ganix.app.iphone.Ganix"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "br.com.ganix.app.iphone.Ganix"
+        },
+        "cordova-plugin-geolocation": {
+            "PACKAGE_NAME": "br.com.ganix.app.iphone.Ganix"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "br.com.ganix.app.iphone.Ganix"
+        },
+        "cordova-plugin-statusbar": {
+            "PACKAGE_NAME": "br.com.ganix.app.iphone.Ganix"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "br.com.ganix.app.iphone.Ganix"
+        },
+        "ionic-plugin-keyboard": {
+            "PACKAGE_NAME": "br.com.ganix.app.iphone.Ganix"
+        }
+    },
+    "dependent_plugins": {}
+}

@@ -1,0 +1,340 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 18/09/2015, 13:48:18
+    Author     : oscarsilva
+*/
+
+$ganix-backgound-default-purple:  #462866 !default;
+$ganix-backgound-default-green:  #3c9e9f !default;
+$ganix-background-menu-color:    black !default;
+$ganix-white-default-font-color: whitesmoke !default;
+$ganix-color-green: #389EA0;
+
+
+// Colors
+// -------------------------------
+$stable:                          $ganix-backgound-default-purple;
+
+// Base
+// -------------------------------
+$base-background-color:           $stable;
+
+// Buttons
+// -------------------------------
+$button-stable-text:              $ganix-white-default-font-color;
+$button-light-bg:                 transparent;
+$button-light-text:               $ganix-white-default-font-color;
+
+// Menus
+// -------------------------------
+$menu-bg:                         $ganix-background-menu-color;
+
+// Items
+// -------------------------------
+
+// Bars
+// -------------------------------
+$bar-transparency:                0;
+
+.scroll {
+    height: 100%;
+}
+ 
+#map {
+    width: 100%;
+    height: 100%;
+}
+
+.iw-establishment{
+    background-color: $ganix-backgound-default-green;
+    alignment-adjust: central;
+    color: $ganix-white-default-font-color;
+    width: 150px;
+    height: 150px;
+    font: HelveticaNeueLTStd;
+}
+
+.iw-establishment table{
+    padding: 10px;
+    width: 100%;
+    height: 100%;
+}
+
+
+.iw-establishment-fantasyName{
+    width: 100%;
+    height: 100%;
+    font-size: large;
+    font-weight: bolder;
+}
+
+.iw-establishment-ticketValue{
+    width: 100%;
+    height: 100%;
+    font-size: large;
+}
+
+.iw-establishment-peopleQuantity{
+    font-size: xx-large;
+    font-weight: bolder;
+    text-align: left;
+    span{
+        font-size: large;
+        font-weight: lighter;
+    }
+}
+
+.iw-establishment-manQuantity{
+    font-size: x-large;
+    text-align: right;
+}
+
+.iw-establishment-womanQuantity{
+    font-size: x-large;
+    text-align: right;
+}
+
+.iw-establishment-footer{
+    text-align: center;
+}
+
+.iw-establishment-gender-image{
+    background-attachment: scroll;
+    background-position: left center;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-clip: padding-box;
+    background-origin: content-box;
+    background-size: contain;
+    margin-right: 5px;
+    margin-bottom: 2px;
+}
+
+.iw-establishment-manQuantity-image{
+    background-image: url(../img/ico_homem@2x.png);
+    
+}
+.iw-establishment-womanQuantity-image{
+    background-image: url(../img/ico_mulher@2x.png);
+}
+
+.gm-style {
+    background-color: $ganix-backgound-default-green;
+}
+
+.gm-style-iw {
+   background-color: $ganix-backgound-default-green;
+}
+
+.help-slider-box{
+max-width:100%; 
+max-height:100%;
+}
+
+.about-view-menu {
+    bottom: 2px;
+    width: 100%;
+    position: fixed !important;
+    border: 0px !important;
+    font-size: 9pt !important;
+    padding-left: 25px !important;
+}
+
+.about-view-menu div {
+    margin-top: 15px;
+}
+
+.about-view-menu:before {
+    content : "";
+    position: absolute;
+    height  : 1px;
+    width   : 70%;
+    border-bottom: 1px solid white;
+    left: 15%;
+}
+
+.about-view-menu a:active {
+    color: white;
+}
+
+.about-view-menu a:visited {
+    color: white;
+}
+
+.about-view-menu a {
+    color: white;
+}
+
+.text-small {
+    margin-top: 10px;
+    font-size: 7pt !important;
+    width: 100%;
+    text-align: left;
+    word-wrap: break-word;
+    flex-wrap: wrap;
+    color: white !important;
+}
+
+.parceiros {
+    margin: 10px 5px 5px 0px; 
+    text-align: center;
+}
+
+.parceiros .divLogoParceiro {
+    float: left;
+    width: 100%;
+    text-align: center;
+}
+
+.parceiros .divLogoParceiro img {
+    width: 50%;
+}
+
+.parceiros p {
+    color: white !important;
+    font-size: 9pt !important;
+}
+
+#iw-container {
+	color: white;
+    min-width: 150px;
+}
+
+#iw-container .iw-title {
+   font-family: 'Open Sans Condensed', sans-serif;
+   font-size: 20px;
+   font-weight: 400;
+   padding: 10px 0px 2px 10px;
+   border-radius: 3px 3px 0 0;
+   text-align: center;
+}
+
+.gm-style-iw {
+   top: 15px !important;
+   left: 0 !important;
+   box-shadow: 0 1px 6px rgba(178, 178, 178, 0.6);
+   border: 1px solid $ganix-backgound-default-green;
+   border-radius: 3px 3px 10px 10px !important;
+}
+
+#iw-container .iw-content {
+	font-size: 16px;
+	line-height: 18px;
+	margin-right: 1px;
+	padding: 5px 5px 5px 15px;
+	max-height: 140px;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+#iw-container .iw-content .iw-content-image,
+.iw-content-image {
+    width: 25px;
+    float: left;
+}
+
+#iw-container .iw-content .iw-subTitle {
+	font-size: 18px !important;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+#iw-container .iw-content .iw-content-left {
+    float: left;
+    width: 50%;
+    margin: 5px 0px;
+    padding: 0px;
+    text-align: center !important;
+}
+
+#iw-container .iw-content .iw-content-left span {
+    font-size: 32px;
+}
+
+#iw-container .iw-content .iw-content-right {
+    float: left;
+    width: 50%;
+    margin: 0px;
+    padding: 0px;
+    text-align: right !important;
+    font-size: 22px !important;
+    line-height: 24px;
+}
+
+#iw-container .iw-footer {
+    width: 90%;
+    text-align: center !important;
+    margin-left: 10%;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+#iw-container .iw-footer a,
+#iw-container .iw-footer a:visited,
+#iw-container .iw-footer a:active {
+    color: white !important;
+    text-decoration: none;
+}
+
+.establishmentTags {
+    margin: 2px 0px 5px 0px;
+    font-size: 9pt;
+    color: #96969C;
+}
+
+.establishmentTags span {
+    margin: 0px 0px 5px 5px;
+}
+
+.establishmentDescription {
+    margin-top: 5px;
+}
+
+.establishmentDescription p {
+    margin: 10px;
+    text-align: justify;
+}
+
+.establishmentGrid {
+    padding: 0px !important;
+}
+
+.establishmentRow {
+    border-top: 1px solid #BBBABC;
+    padding: 0px !important;
+    background-color: white;
+}
+
+.establishmentGrid .borderRight {
+    border-right: 1px solid #BBBABC;
+}
+
+.establishmentColTitle {
+    font-weight: bold;
+    font-size: 12pt;
+}
+
+.establishmentColDestaque {
+    font-weight: normal;
+    font-size: 16pt;
+    font-family: Tahoma;
+}
+
+.establishmentRow a,
+.establishmentRow a:visited,
+.establishmentRow a:active {
+    color: $ganix-color-green;
+}
+
+.accordion {
+    background-color: $ganix-backgound-default-green !important;
+}
+
+.ganix-accordion-item {
+    color: $ganix-color-green !important;
+}

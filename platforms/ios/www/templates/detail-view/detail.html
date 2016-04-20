@@ -1,0 +1,71 @@
+<ion-view view-title="{{ establishmentDetail.establishmentName }}">
+  <ion-content>
+      <div>
+          {{ establishmentDetail.establishmentTags}}
+      <div>
+      <div>
+          <ion-slide-box pager-click='showpage(index)'>
+            <ion-slide ng-repeat="url in imageDetail.urls">
+                <div style="width: 100%; height: 150px;background-color: red;">
+                    <h1>{{ url}}</h1>
+                </div>
+          </ion-slide>
+        </ion-slide-box>  
+      </div>
+      <div>
+          <p>
+              {{establishmentDetail.establishmentDescription}}
+          </p>
+      </div>
+          <div class="row">
+            <div class="col">
+                <b>Lotação</b>
+                <br/>
+                M {{capacityDetail.womanQuantity}} H {{ capacityDetail.manQuantity }} no local
+                <br/>
+                estimativa de pessoas <br/>
+                {{capacityDetail.estimedQuantity}} / {{capacityDetail.totalQuantity}}
+            </div>
+            <div class="col">
+                <b>Horário</b>
+                <br/>
+                {{establishmentDetail.startTime}} às {{establishmentDetail.endTime}}
+                <br/>
+                {{isOpened()}}
+            </div>
+          </div>
+          <div class="row">
+              <div class="col">
+                  <b>Distância</b>
+                  <br/>
+                  à {{establishmentDetail.distance}} {{establishmentDetail.distanceUnit}}
+                  <br/>
+                  de sua localização atual
+                  <br/>
+                  <a href="#">Clique aqui e veja a melhor rota</a>
+              </div>
+              <div class="col">
+                  <b>Preço Médio</b>
+                  <br/>
+                  {{establishmentDetail.ticketValue | currency:"R$"}}
+              </div>
+          </div>
+          <ion-list>
+            <div ng-repeat="group in groups">
+                <ion-item class="item-stable"
+                          ng-click="toggleGroup(group)"
+                          ng-class="{active: isGroupShown(group)}">
+                    <i class="icon" ng-class="isGroupShown(group) ? 'ion-minus' : 'ion-plus'"></i>
+                     
+                    {{group.name}}
+                </ion-item>
+                <ion-item class="item-accordion"
+                          ng-repeat="item in group.items"
+                          ng-show="isGroupShown(group)">
+                    {{item}}
+                </ion-item>
+            </div>
+        </ion-list>
+      </ion-pane>
+  </ion-content>
+</ion-view>

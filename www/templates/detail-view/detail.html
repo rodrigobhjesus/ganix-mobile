@@ -1,0 +1,94 @@
+<!--<ion-view view-title="Detail">
+  <ion-content>
+    <h1>Detalhe de estabelecimentoooooooooooooooooooo</h1>
+  </ion-content>
+</ion-view>-->
+
+<ion-view view-title="{{ establishmentDetail.establishmentId }} - {{ establishmentDetail.establishmentName }}">
+  <ion-content style="background-color: #F0EFF4;">
+      <div class="establishmentTags">
+          <span>{{ establishmentDetail.establishmentTags }}</span>
+      <div>
+      <div>
+          <ion-slide-box pager-click='showpage(index)'>
+            <ion-slide ng-repeat="url in imageDetail.urls">
+                <div style="text-align: center; width: 100%; height: 150px;">
+                    <!--<h1>{{ url }}</h1> -->
+					<img src="{{ url }}" width="100%" height="150px" />
+                </div>
+          </ion-slide>
+        </ion-slide-box>  
+      </div>
+      <div class="establishmentDescription">
+          <p>
+              {{establishmentDetail.establishmentDescription}}
+          </p>
+      </div>
+	  <div class="establishmentGrid">
+		  <div class="row establishmentRow">
+			<div class="col borderRight">
+				<span class="establishmentColTitle">Lotação</span>
+				<br/>
+				<div style="margin-top: 5px;">
+					<span class="establishmentColDestaque">
+						<img src="../../img/ico_mulher_black.png" height="20px" alt="women"/> {{capacityDetail.womanQuantity}}
+						<img src="../../img/ico_homem_black.png" height="18px" alt="men"/> {{ capacityDetail.manQuantity }} 
+					</span> no local
+				</div>
+				<div>
+					estimativa de pessoas <br/>
+					<span class="establishmentColDestaque">
+						{{capacityDetail.estimedQuantity}} / {{capacityDetail.totalQuantity}}
+					</span>
+				</div>
+			</div>
+			<div class="col">
+				<span class="establishmentColTitle">Horário</span>
+				<br/>
+				<div style="margin-top: 5px;">
+					<span class="establishmentColDestaque">{{establishmentDetail.startTime}} às {{establishmentDetail.endTime}}</span>
+				<br/>
+				<br/>
+				<p> {{ isOpened() }} </p>
+				</div>
+			</div>
+		  </div>
+		  <div class="row establishmentRow">
+			  <div class="col borderRight">
+					<span class="establishmentColTitle">Distância</span>
+					<br/>
+					<div style="margin-top: 5px;">
+						<span class="establishmentColDestaque"> à {{establishmentDetail.distance}} {{establishmentDetail.distanceUnit}} </span>
+						<br/>
+					  de sua localização atual
+  				    </div>
+					<br/>
+					<a href="#">Clique aqui e veja a melhor rota</a>
+			  </div>
+			  <div class="col">
+					<span class="establishmentColTitle">Preço Médio</span>
+					<br/>
+					<div style="margin-top: 5px;">
+						<span class="establishmentColDestaque"> {{establishmentDetail.ticketValue | currency:"R$ "}} </span>
+  				    </div>
+			  </div>
+		  </div>
+	  </div>
+	  <ion-list>
+		<div ng-repeat="group in groups">
+			<ion-item class="item-stable accordion"
+					  ng-click="toggleGroup(group)"
+					  ng-class="{active: isGroupShown(group)}">
+				<i class="icon" ng-class="isGroupShown(group) ? 'ion-minus' : 'ion-plus'"></i>
+				 
+				{{group.name}}
+			</ion-item>
+			<ion-item class="item-accordion ganix-accordion-item"
+					  ng-repeat="item in group.items"
+					  ng-show="isGroupShown(group)">
+				{{item}}
+			</ion-item>
+		</div>
+	  </ion-list>
+  </ion-content>
+</ion-view>

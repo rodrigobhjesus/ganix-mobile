@@ -1,0 +1,40 @@
+<div class="iw-establishment">
+    <table>
+        <thead>
+            <tr>
+                <td colspan="2" class="iw-establishment-fantasyName">
+                    {{record.fantasyName}}
+                </td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td colspan="2">
+                    <span class="iw-establishment-ticketValue">{{record.ticketValue | currency:"R$"}}</span>
+                </td>
+            </tr>
+            <tr><td><br/></td></tr>
+            <tr>
+                <td rowspan="2" class="iw-establishment-peopleQuantity">
+                    {{record.manQuantity + record.womanQuantity}}
+                    <br/>
+                    <span>{{"no local" | translate}}</span>
+                </td>
+                <td class="iw-establishment-manQuantity">
+                    <div class="iw-establishment-gender-image iw-establishment-manQuantity-image">{{record.manQuantity}}</div>
+                </td>
+            </tr>
+            <tr>
+                <td class="iw-establishment-womanQuantity">
+                    <div class="iw-establishment-gender-image iw-establishment-womanQuantity-image">{{record.womanQuantity}}</div>
+                </td>
+            </tr>
+            <tr><td><br/></td></tr>
+            <tr>
+                <td colspan="2" class="iw-establishment-footer">
+                    <a href='#/app/detail'>{{"ver detalhes" | translate}}</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

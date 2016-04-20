@@ -1,0 +1,13 @@
+{
+  "name": "GanixClient",
+  "app_id": "",
+  "gulpStartupTasks": [
+    "sass",
+    "browserify",
+    "watch"
+  ],
+  "watchPatterns": [
+    "www/**/*",
+    "!www/lib/**/*"
+  ]
+}
