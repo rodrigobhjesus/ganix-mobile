@@ -271,6 +271,12 @@ and open the template in the editor.
 .ganix-accordion-item {
   color: #389EA0 !important; }
 
+.button-bar .active {
+  background-color: #F0C96A !important;
+  border: 1px solid #462866 !important;
+  color: #462866 !important;
+  font-weight: bold !important; }
+
 /*!
   Ionicons, v2.0.1
   Created by Ben Sperry for the Ionic Framework, http://ionicons.com/

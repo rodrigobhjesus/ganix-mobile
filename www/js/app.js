@@ -7,11 +7,13 @@
 require('./menu-view/menu-view');
 require('./map-view/map-view');
 require('./detail-view/detail-view');
+require('./filter-view/filter-view');
 
 angular.module('starter', ['ionic',
                             'ngCordova',
                             'Menu', 
                             'Map', 
+							'Filter',
                             'Detail',
                             'pascalprecht.translate',
                             'starter.controllers'])
@@ -73,6 +75,15 @@ angular.module('starter', ['ionic',
         'menuContent': {
           templateUrl: 'templates/map-view/map.html',
           controller: 'MapCtrl'
+        }
+      }
+  })
+  .state('app.filter', {
+      url: '/filter',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/filter-view/filter.html',
+          controller: 'FilterCtrl'
         }
       }
   })

@@ -1,41 +1,49 @@
-<ion-view view-title="Filtro - {{phoneNumber}}">
-  <ion-content>
-      <div>
+<ion-view view-title="Filtro - {{phoneNumber}}	">
+  <ion-content style="background-color: #F0EFF4;">
+	  <div class="card">
+		<div class="item item-divider">
+			Filtre o raio de distância entre o estabelecimento e sua posição atual
+		</div>
+	  </div>
+      <div class="card">
         <div class="item range range-positive">
           <input type="range" name="volume" min="0" max="100" value="10">
         </div>
       </div>
-      <div>
+      <div class="card">
           <div class="button-bar">
-            <a class="button">Bares</a>
-            <a class="button">Casas Noturnas</a>
-            <a class="button">Indiferente</a>
+            <a class="button {{(establishmentType == 'Bares') &&  'active' || ''}}" ng-click="setType($event)">Bares</a>
+            <a class="button {{(establishmentType == 'Casas Noturnas') &&  'active' || ''}}" ng-click="setType($event)">Casas Noturnas</a>
+            <a class="button {{(establishmentType == 'Indiferente') &&  'active' || ''}}" ng-click="setType($event)">Indiferente</a>
           </div>
       </div>
-      <div>
+      <div class="card">
+		   <div class="item item-divider" style="margin-bottom: 1px;">
+			Quero um lugar com mais:
+		  </div>
           <div class="button-bar">
-            <a class="button">Mulheres</a>
-            <a class="button">Homens</a>
-            <a class="button">Indiferente</a>
+            <a class="button {{(searchType == 'Mulheres') &&  'active' || ''}}" ng-click="setSearchType($event)">Mulheres</a>
+            <a class="button {{(searchType == 'Homens') &&  'active' || ''}}" ng-click="setSearchType($event)">Homens</a>
+            <a class="button {{(searchType == 'Indiferente') &&  'active' || ''}}" ng-click="setSearchType($event)">Indiferente</a>
           </div>          
       </div>
-      <div>
+      <div class="card">
           <div class="item range range-positive">
             <input type="range" name="volume" min="0" max="200" value="50">
           </div>
       </div>
-      <div>
+      <div class="card">
           <div class="item item-input-inset">
             <label class="item-input-wrapper">
               <input type="text" placeholder="Email">
             </label>
             <button class="button button-small">
-              Submit
+              Enviar
             </button>
           </div>
           <div class="card">
             <div class="item item-text-wrap">
-              Tag 001
+              Tag
             </div>
           </div>
       </div>
