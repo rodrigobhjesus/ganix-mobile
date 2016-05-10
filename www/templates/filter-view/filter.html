@@ -1,13 +1,18 @@
-<ion-view view-title="Filtro - {{phoneNumber}}	">
+<ion-view view-title="Filtros">
   <ion-content style="background-color: #F0EFF4;">
 	  <div class="card">
 		<div class="item item-divider">
-			Filtre o raio de distância entre o estabelecimento e sua posição atual
+			<span class="wrapped">
+			Filtre o raio de distância entre o estabelecimento e sua posição atual</span>
 		</div>
 	  </div>
       <div class="card">
-        <div class="item range range-positive">
-          <input type="range" name="volume" min="0" max="100" value="10">
+		<div class="item item-divider" style="margin-bottom: 1px;">
+			Distância: 
+			<output id="rangeDistance">10 Km</output>
+		</div>
+        <div class="item range range-positive">	
+			<input type="range" class="range" name="volume" min="0" max="100" value="10" onchange="rangeDistance.value=value + ' Km'">
         </div>
       </div>
       <div class="card">
@@ -28,24 +33,42 @@
           </div>          
       </div>
       <div class="card">
-          <div class="item range range-positive">
-            <input type="range" name="volume" min="0" max="200" value="50">
-          </div>
+			<div class="item item-divider" style="margin-bottom: 1px;">
+				Estou disposto a gastar: 
+				<output id="rangeValue">R$ 50,00</output>
+			</div>
+			<div class="item range range-positive">	
+				<input type="range" class="range" name="volume" min="0" max="200" value="50" onchange="rangeValue.value='R$ ' + value + ',00'">
+			</div>
       </div>
-      <div class="card">
-          <div class="item item-input-inset">
-            <label class="item-input-wrapper">
-              <input type="text" placeholder="Email">
+	  <div class="card">
+		<div class="item item-divider">
+			<span class="wrapped">Descreva algumas características do local desejado:</span>
+		</div>
+		<div class="item item-input-inset">
+			<label class="item-input-wrapper">
+              <input id="txtTag" style="width: 100%;" data-ng-model="tagText" list="tags" placeholder="Ex.: Nome do local, Sertanejo, bar, barato" />
             </label>
-            <button class="button button-small">
-              Enviar
+            <button class="button button-small" data-ng-click="addTag(tagText);">
+              Adicionar
             </button>
-          </div>
-          <div class="card">
-            <div class="item item-text-wrap">
-              Tag
-            </div>
-          </div>
-      </div>
+			<datalist id="tags">
+				<option ng-repeat="item in filterTags" value="{{item}}">
+			</datalist>
+		</div>
+		<div class="item">
+			<div class="list">
+				<div ng-repeat="selectedItem in selectedTags" class="item item-button-right">
+					<span style="color: black;">{{selectedItem}}</span>
+					<button class="button" ng-click="removeTag(selectedItem)">
+					  <i class="icon ion-ios-close-empty"></i>
+					</button>
+				</div>
+			</div>
+		</div>
+		<div class="item item-divider" style="text-align: right;">
+			<button class="button button-small">Concluído</button>
+		</div>
+	  </div>
   </ion-content>
 </ion-view>

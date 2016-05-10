@@ -13,6 +13,7 @@ $ganix-backgound-default-green:  #3c9e9f !default;
 $ganix-background-menu-color:    black !default;
 $ganix-white-default-font-color: whitesmoke !default;
 $ganix-color-green: #389EA0;
+$ganix-selected-orange: #F0C96A;
 
 
 // Colors
@@ -337,4 +338,20 @@ max-height:100%;
 
 .ganix-accordion-item {
     color: $ganix-color-green !important;
+}
+
+.button-bar .active {
+	background-color: $ganix-selected-orange !important;
+	border: 1px solid $ganix-backgound-default-purple !important;
+	color: $ganix-backgound-default-purple !important;
+	font-weight: bold !important;
+}
+
+.range::-webkit-slider-thumb {
+	background-color: $ganix-selected-orange !important;
+	border: 1px solid #BDA67A !important;
+}
+
+.wrapped {
+	white-space: normal;
 }

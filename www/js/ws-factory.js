@@ -3,6 +3,22 @@ module.exports = function($http) {
   var BASE_URL = 'http://54.94.168.2:50201/API/';
   var ESTABLISHMENT_SERVICE_NAME = 'Establishment';
   
+  var filterList = [
+	{ name: "Woods" },
+	{ name: "Sertanejo" },
+	{ name: "Rock" },
+	{ name: "Pop" },
+	{ name: "Bar" },
+	{ name: "Balada" },
+	{ name: "Eletrônica" },
+	{ name: "Bar do Alemão" },
+	{ name: "Shed" },
+	{ name: "Santa Marta" },
+	{ name: "Barato" },
+	{ name: "Hotmilk" },
+	{ name: "Funk" }	
+  ];
+  
   var markers = [ {
 				establishmentId: 1,
 				cnpj : 1234234,
@@ -156,7 +172,10 @@ module.exports = function($http) {
                         }
                     ]
                };
-    }
+    },
+	filterTags: function() {
+		return filterList;
+	}
     
   };
 };

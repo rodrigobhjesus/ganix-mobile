@@ -277,6 +277,13 @@ and open the template in the editor.
   color: #462866 !important;
   font-weight: bold !important; }
 
+.range::-webkit-slider-thumb {
+  background-color: #F0C96A !important;
+  border: 1px solid #BDA67A !important; }
+
+.wrapped {
+  white-space: normal; }
+
 /*!
   Ionicons, v2.0.1
   Created by Ben Sperry for the Ionic Framework, http://ionicons.com/
