@@ -3,6 +3,6 @@
 module.exports = function(){
     return{
       restrict: 'E',
-      templateUrl: '../../templates/menu-view/about.html'
+      templateUrl: './templates/menu-view/about.html'
     };
 };

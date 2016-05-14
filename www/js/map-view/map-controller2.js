@@ -65,7 +65,7 @@ module.exports = [
 											var menCount = establishment.manQuantity;
 											var womenCount = establishment.womanQuantity;
 											var percent = ((menCount + womenCount) / establishment.quantityLimit) * 100;
-											var urlPin = '../../img/pin' + getPercent(percent) + '.png';
+											var urlPin = './img/pin' + getPercent(percent) + '.png';
 
 											var marker = new google.maps.Marker(
 												{
@@ -88,9 +88,9 @@ module.exports = [
 															  '<div class="iw-subTitle">R$ ' + establishment.ticketValue + ',00</div>' +
 															  '<div class="iw-content-left"><span id="number">' + (menCount + womenCount) + '</span><br/>no local</div>' +
 															  '<div class="iw-content-right">' +
-																'<div class="iw-content-image"><img src="../img/ico_mulher.png" height="20px" alt="women"/></div>' + womenCount +
+																'<div class="iw-content-image"><img src="./img/ico_mulher.png" height="20px" alt="women"/></div>' + womenCount +
 																'<div style="clear:both;"></div>' +
-																'<div class="iw-content-image"><img src="../img/ico_homem.png" height="18px" alt="men"/></div>' + menCount +
+																'<div class="iw-content-image"><img src="./img/ico_homem.png" height="18px" alt="men"/></div>' + menCount +
 															  '</div>' +
 															  '<div style="clear:both;"></div>' +
 															  '<div class="iw-footer"><a href="#/app/establishments/' + establishment.establishmentId + '">ver detalhes</a></div>' +

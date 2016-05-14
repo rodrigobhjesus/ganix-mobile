@@ -7,7 +7,7 @@
   <author email="contato@ganix.com.br" href="http://www.ganix.com.br/">
       Ganix Ltda 
   </author>
-  <content src="index.html"/>
+  <content src="main.html"/>
   <access origin="*"/>
   <allow-navigation href="*" />
   <preference name="webviewbounce" value="false"/>
